@@ -14,9 +14,10 @@ tags: ["mt-bench", "chatbot-arena", "llm-as-a-judge", "bias"]
 ## Key points
 
 - Introduces MT-Bench and Chatbot Arena for preference-oriented evaluation of chat assistants.
-- Reports high agreement between strong LLM judges and human raters in many settings.
+- Reports high agreement (>80%) between strong LLM judges and human raters in many settings. This exceeded even human-to-human agreement. 
 - Documents important judge limitations and mitigation methods (e.g., position swapping, reference-guided grading).
 
 ## Notes
 
-- Important context when choosing automated evaluation strategies for RAG and agent systems.
+- LLMs are susceptible to position bias. They often prefer the first response when provided with two very similar responses. 
+- Most results here apply to ChatGPT 4.0
