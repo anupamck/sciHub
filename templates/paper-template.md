@@ -13,9 +13,12 @@ tags: ["optional-tag-1", "optional-tag-2"]
 
 ## Key points
 
-- Main method or claim:
-- Strong evidence:
+- Main claims:
+- Evidence:
 - Limitations or caveats:
+
+## Methodology
+- Brief and easy to understand description of the methodology used in the paper.
 
 ## Notes
 
