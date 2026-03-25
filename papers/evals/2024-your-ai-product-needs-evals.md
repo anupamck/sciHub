@@ -3,7 +3,7 @@ title: "Your AI Product Needs Evals"
 summary: "Practitioner's guide to building domain-specific LLM evaluation systems, arguing that the root cause of failed AI products is almost always a failure to create robust evals, and proposing a three-level framework: unit tests (assertions), human & model eval (trace inspection + LLM-as-judge alignment), and A/B testing."
 year: 2024
 link: "https://hamel.dev/blog/posts/evals/"
-subjects: ["ai", "llm-evaluation"]
+subjects: ["evals", "ai", "llm-evaluation"]
 tags: ["evals", "llm-ops", "fine-tuning", "debugging", "rag", "practitioner-guide"]
 ---
 

@@ -3,7 +3,7 @@ title: "RAGAS: Automated Evaluation of Retrieval Augmented Generation"
 summary: "Introduces a reference-free evaluation framework for RAG pipelines with metrics for retrieval quality, answer faithfulness, and generation quality, enabling faster iteration without extensive human labels."
 year: 2023
 link: "https://arxiv.org/pdf/2309.15217"
-subjects: ["ai", "rag", "llm-evaluation"]
+subjects: ["evals", "ai", "rag", "llm-evaluation"]
 tags: ["ragas", "evaluation", "faithfulness", "retrieval-metrics"]
 ---
 

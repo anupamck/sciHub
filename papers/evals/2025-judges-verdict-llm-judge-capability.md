@@ -3,7 +3,7 @@ title: "Judge's Verdict: A Comprehensive Analysis of LLM Judge Capability Throug
 summary: "Evaluates 54 LLMs as judges for answer-accuracy scoring and proposes a two-step benchmark using correlation plus Cohen's kappa-based human-likeness analysis. Finds 27 Tier 1 judges, including human-like and super-consistent categories."
 year: 2025
 link: "https://arxiv.org/pdf/2510.09738"
-subjects: ["ai", "llm-evaluation", "rag"]
+subjects: ["evals", "ai", "llm-evaluation", "rag"]
 tags: ["llm-as-a-judge", "cohens-kappa", "benchmark"]
 ---
 
