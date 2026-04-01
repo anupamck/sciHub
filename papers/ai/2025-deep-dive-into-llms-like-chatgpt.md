@@ -60,7 +60,30 @@ tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
    		-  Today, a lot of this is automated with existing LLMs
    	 -  Experts in the field are hired to do the labelling and construction of datasets
    	 -  A good mental model to use when talking with an LLM -> A simulation of a conversation with a human labeller
+  -  This process employs Reinforcement Learning with Human Feedback (RLHF)
 - Hallucinations
-	-  
-
+	- When you ask a model about a person that doesn't exist, it will generate a response in the confident tone and the style of answers to questions about real people present in the training set, in a manner that is statistically consistent
+	- To avoid hallucinations, they
+  	- Take a sample from the training data
+  	- Generate a factual question from it
+  	- Sample responses from the model
+  	- Score the correctness of the response by using the original context and the model as the judge
+  	- Score the informativeness of the response by using the original context and the model as the judge
+    	- Informativeness is a measure of how cogently and confidently the model is able to answer the question
+  	- For responses that are informative and incorrect, they
+    	- Either generate a refusal to answer th question
+    	- Or add a web search tool to look up the question on the web  
+ - The context window is analogous to working memory. The training data is analogous to long term memory. 
+- Knowledge of self
+  - For questions like "Who are you?", "What is your name?" etc. the model is provided with a set of hard-coded responses. It is then fine-tuned to give these responses when it is asked these sort of questions. 
+- Thinking and reasoning
+  - When training a model to reason, it is better to train it with dataset that breaks the reasoning down in small steps that go from left to right, as the answer is generated. This is because each token that is generated only has a finite amount of computation power, and it is better to spread this out across many tokens rather than cram them into a few tokens
+    - E.g. Consider this - Human: "Emily buys 3 apples and 2 oranges. Each orange costs $2. The total cost of all the fruit is $13. What is the cost of apples?"
+    - To answer this question, it is better to use this answer - Assistant: "The total cost of the oranges is $4. 13 - 4 = 9, the cost of the 3 apples is $9. 9/3 = 3, so each apple costs $3. The answer is $3. 
+    - An answer like this is counterproductive - Assistant: "The answer is $3. This is because 2 oranges at $2 are $4 total. So the 3 apples cost $9, and therefore each apple is 9/3 = $3". This is because the model is forced to cram the entire computation of this answer into its 4th token, where it produces the final answer
+  - For math problems, it is better to ask the model to "use code" to answer the question
+- Jagged intelligence
+  - Models are still not good at certain simple tasks that take little intelligence
+- Supervised finetuning to reinforcement learning
+   
 
