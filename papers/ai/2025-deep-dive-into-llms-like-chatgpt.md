@@ -52,6 +52,7 @@ tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
 	 - The pre-training stage is around 3 months
 - Post training data (conversations)
 	 - The base model is then fed a new training data set that is comprised of conversations that are typically between a human and an LLM
+	 - This process is called "supervised finetuning"
  	 - The post-training stage usually only lasts a couple of hours
 	 - There are protocols used to convert conversations into tokens. Analogous to TCP/IP 
    	 - Each LLM has a different protocol
@@ -60,7 +61,6 @@ tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
    		-  Today, a lot of this is automated with existing LLMs
    	 -  Experts in the field are hired to do the labelling and construction of datasets
    	 -  A good mental model to use when talking with an LLM -> A simulation of a conversation with a human labeller
-  -  This process employs Reinforcement Learning with Human Feedback (RLHF)
 - Hallucinations
 	- When you ask a model about a person that doesn't exist, it will generate a response in the confident tone and the style of answers to questions about real people present in the training set, in a manner that is statistically consistent
 	- To avoid hallucinations, they
@@ -85,5 +85,30 @@ tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
 - Jagged intelligence
   - Models are still not good at certain simple tasks that take little intelligence
 - Supervised finetuning to reinforcement learning
-   
+  - Take an analogy of learning a subject from a textbook
+    - pretraining is like reading the textbook
+    - supervised finetuning is like going through solved examples
+    - reinforcement learning is like solving practice problems
+  - The LLM is given the problem and the final solution. It needs to figure out how best to get to the final solution
+    - The LLM is asked to solve the same problem multiple times
+    - From all the correct solutions, the best ones are chosen to update the model's parameters
+  - RL learning is the newest technique in this training process, and one that isn't standardised yet
+    - E.g. How the 'best' solutions are chosen from a set of correct ones
+    - As the model size increases, reasoning properties emerge where the model 'discovers' ways to solve the problem during its training
+    - This is what causes the model to 'think aloud'. First, the model outputs its thought tokens, and then summarizes those tokens to arrive at the final solution.
+    - You can use 'together.ai' to access a US company hosting the DeepSeek R1 model, which is open-source
+- AlphaGo
+  - The technique used in RL is similar to how AI systems got better than human beings at chess or go. They reinforce all possible ways to get to the solution – even ones that humans don't use
+  - RL exposes the model to more dynamic behaviour
+    - It is open to drift away from its objectives 
+    - It is open to explore solutions that humans have never considered
+- Reinforcement learning from human feedback (RLHF)
+  - Whenever we train the model to perform subjective tasks (like telling a good joke), we need human feedback in the loop
+  The naive approach would be to take 1000 updates of 1000 prompts of 1000 rollouts, needing humans to score 1000000000 different outputs
+  - The more feasible approach takes 1000 prompts, gets 5 rollouts, orders them from best to worst to derive 5000 human ranked scores
+  - From these scores, we train a reward model, which stands in as a proxy for human judgement
+  - There is an optimal number of turns until RLHF is good, and after which its performance deteriorates   
+    - If RLHF is done too long, the model can end up 'gaming' the reward model and start generating nonsensical output that scores high
+    - This is analogous to Goodhart's law, where the reward model because a target on its own
+    - This is a crucial difference between RLHF and RL
 
