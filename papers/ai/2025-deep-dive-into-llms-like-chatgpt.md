@@ -111,4 +111,13 @@ tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
     - If RLHF is done too long, the model can end up 'gaming' the reward model and start generating nonsensical output that scores high
     - This is analogous to Goodhart's law, where the reward model because a target on its own
     - This is a crucial difference between RLHF and RL
-
+- Preview of things to come
+  - LLMs will turn multimodal (audio, images, video, natural conversations)
+    - You can tokenize audio and images and apply the same principles
+  - The rise of agents (long, coherent, error-correcting contexts)
+  - Computer use (agents will be able to control computers)
+- Keeping track of LLMs
+  - [LM Arena](https://lmarena.ai)
+- Access models
+  - [Together.ai](https://together.ai) provides access to open source / base models 
+  - [LM Studio ](https://lmstudio.ai/) helps you configure and run models locally
