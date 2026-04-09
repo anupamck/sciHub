@@ -15,6 +15,11 @@ tags: ["evals", "llm-ops", "fine-tuning", "debugging", "rag", "practitioner-guid
 
 - The root cause of unsuccessful AI products is almost always a failure to create robust evaluation systems. Success with AI hinges on how fast you can iterate, and iteration speed is gated by eval quality.
 - Three levels of evaluation, ordered by cost: Level 1 (unit tests — fast assertions run on every code change), Level 2 (human & model eval — trace inspection, LLM-as-judge aligned to human labels), Level 3 (A/B testing — only for mature products).
+- Write unit tests for deterministic behaviour that you expect. E.g. retrieving a specific address with a natural language query
+  - Use something like pytest to write and assert this unit test behaviour
+- Run and track your tests regularly
+  - Your reporting framework must include traceability 
+  - It should observe trends and log LLM traces
 - You must remove all friction from looking at data. Build domain-specific trace viewers rather than relying on generic tools. If you aren't looking at lots of data, you're doing it wrong.
 - LLM-as-judge requires continuous alignment with human evaluators. Track agreement over time, collect human critiques explaining decisions, and iterate on the judge prompt. Use the most powerful model you can afford for critiquing.
 - Eval infrastructure is not a sunk cost — it directly unlocks fine-tuning (curated traces become training data), synthetic data generation (test case prompts double as data synthesis prompts), and debugging (trace search + assertions flag root causes).
