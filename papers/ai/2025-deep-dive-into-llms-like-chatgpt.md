@@ -2,7 +2,7 @@
 title: "Deep Dive into LLMs like ChatGPT"
 summary: "A detailed walkthrough on how LLMs work under the hood, starting from the basics."
 year: 2025
-link: "https://www.youtube.com/watch?v=7xTGNNLPyMI&list=PLWrKtdds2HC8oPCNKYxo407EY8cASruhs"
+link: "https://www.youtube.com/watch?v=7xTGNNLPyMI"
 subjects: ["ai", "llms"]
 tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
 ---
