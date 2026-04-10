@@ -4,7 +4,7 @@ summary: ""
 year: 2026
 link: "https://hamel.dev/blog/posts/evals-faq/"
 subjects: ["evals", "ai", "llm-evaluation"]
-tags: []
+tags: ["evals", "error-analysis", "practitioner-guide", "llm-as-judge", "rag", "annotation", "guardrails"]
 ---
 
 ## Why I saved this
