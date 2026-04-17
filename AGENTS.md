@@ -8,3 +8,4 @@
 - In notes, capture related ideas and implications. 
 - In notes, mention papers already saved that are related to this paper. 
 - For both key points and notes, lean on facts that are provided in the abstract and the conclusion. 
+- In papers that are technically complex, break down the main findings for easier understanding. 
