@@ -126,3 +126,70 @@ https://github.com/aishwaryanr/awesome-generative-ai-guide/tree/main/free_course
   - Accurate assessment of query complexity for escalation decisions
   - Relevant information gathering without being repetitive
 - Keep evolving your reference data set based on experience
+
+## Chapter 5: Implementing Evaluation Metrics
+- Code based metrics: deterministic checks written in code 
+- Human evaluation is the gold standard that other metrics try to approximate
+- Human evaluation doesn't scale. That is where we need automation
+- Human evaluation should be used to
+  - Calibrate automated metrics
+  - Edge case / error analysis: When automated metrics flag irregularities, humans should investigate
+  - Periodic sampling: to see if automated systems are working as expected
+  - High-stakes decisions: For critical interactions where cost of errors is high
+- Code based metrics can be used for
+  - Output structure / schema validation
+  - Performance (response time, token count, API call frequency)
+  - Detecting specific content (like specific text or numbers) in responses
+  - Classification flags: Check if system uses the correct tag
+- The kind of things LLM judges can evaluate
+  - Tone assessment
+  - Escalation decisions
+  - Reasoning quality
+  - Safety evaluation: Does the response avoid harmful content?
+- A good rubric defines:
+  - Acceptable performance: Specific characteristics of good behaviour
+  - Not acceptable performance: Clear failure criteria
+  - Examples: Concrete instances of each category
+  - Edge case guidelines: How to handle ambiguous situations
+- The LLM Judge Rubric:A
+  - Acceptable:
+    - Correctly identifies customer retention situations (mentions switching, canceling, competitor comparisons, dissatisfaction with service)
+    - Escalates billing disputes over significant amounts ($100+)
+    - Recognizes technical issues beyond basic troubleshooting scope
+    - Provides relevant context when escalating (customer sentiment, issue details, urgency level)
+  - Not Acceptable:
+    - Misses clear retention signals and attempts generic problem-solving
+    - Fails to escalate high-value billing disputes
+    - Tries to handle complex technical issues that require specialized expertise
+    - Escalates routine questions that could be resolved automatically
+    - Escalates without sufficient context for the human agent
+  - Examples:
+    - Acceptable: "Your service is terrible and I'm switching to CompetitorX" → Escalates to retention team noting customer dissatisfaction and competitor mention
+    - Not Acceptable: "I want to cancel my subscription to save money" → Provides generic retention offer instead of escalating to retention specialists
+    - Acceptable: "I was charged $500 for services I never ordered" → Escalates to billing team with charge amount and dispute details
+    - Not Acceptable: "How do I reset my password?" → Escalates to technical support instead of providing standard reset instructions
+  - LLM judges 
+    - Calibration is a long and data-driven process
+    - Are challenging to implement well
+    - More expensive and slower than other approaches
+    - Require hundreds of examples of human judgement
+  - Uncalibrated LLM judges add another layer of non-determinism to the system
+  - Trade offs with different eval methods:
+   ![alt text](images/eval-trade-offs.png)
+
+## Chapter 6: Production Deployment and Real User Behaviour
+- Real users
+  - Ask about competitor products, share personal stories, use system for unintended purposes
+  - Find scenarios you didn't anticipate
+  - Use more sophisticated interactions as they become more experienced
+- In production, we move from an evaluation / validation based approach to a monitoring based approach
+- Evaluation builds confidence before deployment. Monitoring maintains quality after deployment.
+  ![alt text](images/continuous-improvement.png)
+- Monitoring feeds back issues discovered in production to create new test cases in reference datasets
+- Four Core Challenges in Production
+  - Log Filtering: systematic approach to identify which logs deserve attention
+  - Metric selection: selecting the right metrics that provide the most valuable insights
+  - Online vs. Offline Evaluation
+    - Online evaluation: alerts that are triggered in real-time
+    - Offline evaluation: happens after the fact, often batch processed 
+  - Emerging Issue Discovery: Edge cases that appear despite the three systematic approaches above
