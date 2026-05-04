@@ -16,7 +16,14 @@ tags: ["skill-formation", "cognitive-offloading", "ai-assisted-coding", "human-a
 - AI assistance produced a statistically significant 17% decrease in skill mastery (Cohen's d = 0.738, p = 0.01) — equivalent to nearly two letter grades on a 27-point quiz covering concepts used just minutes earlier.
 - AI did not significantly speed up task completion on average, partly because some participants spent up to 11 minutes (30% of the 35-minute task window) composing AI queries.
 - The largest score gap between AI and no-AI groups was on debugging questions, suggesting the ability to identify and diagnose errors is most vulnerable to AI-assisted workflows.
-- Six distinct AI interaction patterns were identified; three "high-scoring" patterns (conceptual inquiry, hybrid code-explanation, generation-then-comprehension) preserved learning by keeping participants cognitively engaged — quiz scores of 65-86% vs. 24-39% for low-scoring patterns.
+- Six distinct AI interaction patterns were identified via manual annotation of screen recordings. Three patterns involved cognitive offloading and produced poor learning outcomes (avg quiz scores 24-39%):
+  1. **AI Delegation** — fully delegated coding to AI; fastest completion but no skill acquisition.
+  2. **Progressive AI Reliance** — started with some questions, then gradually delegated everything to AI.
+  3. **Iterative AI Debugging** — relied on AI to debug or verify code (5-15 queries) without building their own understanding; slowest and lowest-scoring pattern.
+- Three patterns involved cognitive engagement and preserved learning outcomes (avg quiz scores 65-86%):
+  4. **Generation-Then-Comprehension** — generated code via AI, then asked follow-up questions to understand it; highest quiz scores (86%) of any pattern.
+  5. **Hybrid Code-Explanation** — asked for code generation and explanations together in combined queries.
+  6. **Conceptual Inquiry** — asked AI only conceptual questions and wrote all code independently; largest cluster (7 of 25 participants), fastest among high-scoring patterns.
 - The control group (no AI) encountered significantly more errors during the task, and independently resolving those errors likely drove their stronger skill formation — errors are a feature, not a bug, of learning.
 - AI-enhanced productivity is not a shortcut to competence; AI assistance should be carefully adopted into workflows to preserve skill formation, particularly in safety-critical domains.
 
