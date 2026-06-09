@@ -3,11 +3,16 @@ title: "Deep Dive into LLMs like ChatGPT"
 summary: "A detailed walkthrough on how LLMs work under the hood, starting from the basics."
 year: 2025
 link: "https://www.youtube.com/watch?v=7xTGNNLPyMI"
+transcript: "transcripts/2025-deep-dive-into-llms-like-chatgpt.txt"
 subjects: ["ai", "llms"]
 tags: ["llms", "chatgpt", "transformers", "embeddings", "interpretability"]
 ---
 
 ## Why I saved this
+
+Because it is an awesome explainer video for how LLMs work and how they are trained.
+
+Full transcript: [transcripts/2025-deep-dive-into-llms-like-chatgpt.txt](../../transcripts/2025-deep-dive-into-llms-like-chatgpt.txt)
 
 ## Key points
 - Pretraining data
