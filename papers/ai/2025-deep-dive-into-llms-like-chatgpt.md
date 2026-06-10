@@ -76,7 +76,7 @@ Full transcript: [transcripts/2025-deep-dive-into-llms-like-chatgpt.txt](../../t
   	- Score the informativeness of the response by using the original context and the model as the judge
     	- Informativeness is a measure of how cogently and confidently the model is able to answer the question
   	- For responses that are informative and incorrect, they
-    	- Either generate a refusal to answer th question
+    	- Either generate a refusal to answer the question
     	- Or add a web search tool to look up the question on the web  
  - The context window is analogous to working memory. The training data is analogous to long term memory. 
 - Knowledge of self
@@ -114,7 +114,7 @@ Full transcript: [transcripts/2025-deep-dive-into-llms-like-chatgpt.txt](../../t
   - From these scores, we train a reward model, which stands in as a proxy for human judgement
   - There is an optimal number of turns until RLHF is good, and after which its performance deteriorates   
     - If RLHF is done too long, the model can end up 'gaming' the reward model and start generating nonsensical output that scores high
-    - This is analogous to Goodhart's law, where the reward model because a target on its own
+    - This is analogous to Goodhart's law, where the reward model becomes a target on its own
     - This is a crucial difference between RLHF and RL
 - Preview of things to come
   - LLMs will turn multimodal (audio, images, video, natural conversations)
@@ -126,3 +126,26 @@ Full transcript: [transcripts/2025-deep-dive-into-llms-like-chatgpt.txt](../../t
 - Access models
   - [Together.ai](https://together.ai) provides access to open source / base models 
   - [LM Studio ](https://lmstudio.ai/) helps you configure and run models locally
+
+## FAQ
+
+### How does post-training differ from fine-tuning and reinforcement learning?
+Post-training is the broad umbrella term for everything that happens after pretraining. It includes both fine-tuning and reinforcement learning.
+
+**Supervised fine-tuning (SFT)** is like studying solved examples in a textbook. You show the model curated conversations — "here's the question, here's a great answer" — and it learns to imitate that style. This is how a base model (which just predicts the next token) becomes a chatbot. It's relatively fast (hours, not months) and uses human-written or LLM-generated example conversations as training data.
+
+**Reinforcement learning (RL)** is like solving practice problems. Instead of giving the model the full worked-out answer, you give it just the problem and the final solution, and let it figure out how to get there on its own. It tries the problem many times, and the best correct solutions are used to update its parameters. This is where models learn to "think aloud" — producing chain-of-thought reasoning tokens before arriving at an answer.
+
+The key difference: SFT teaches by showing the right answer. RL teaches by letting the model explore and reinforcing what works — which means it can discover approaches humans never considered (similar to how AlphaGo found novel Go strategies). The tradeoff is that RL is less standardized and can drift from its objectives if not carefully managed.
+
+### How does thinking aloud emerge as part of Reinforcement Learning?
+Nobody programs the model to say "wait, let me reconsider" or "let me try a different approach." During RL, the model generates thousands of independent solutions for each problem. Some solutions happen to include self-checking, backtracking, and re-evaluation — and these solutions get the right answer more often. Since RL reinforces whatever leads to correct answers, the model learns that these "thinking" token sequences are useful.
+
+Over thousands of training steps, response lengths grow as the model discovers that longer chains of thought — trying multiple perspectives, verifying steps — lead to higher accuracy. Karpathy calls these "cognitive strategies" that the model rediscovers on its own. The model is essentially rediscovering what happens inside your head when you solve a problem, not what you would write down in a neat solution — and no human could have hardcoded this behaviour into the training data.
+
+### What is chain-of-thought?
+Chain-of-thought is when a model produces intermediate reasoning steps — "thinking tokens" — before arriving at a final answer, rather than jumping straight to the conclusion. For example, given "Emily buys 3 apples and 2 oranges, each orange costs $2, total is $13, what does each apple cost?":
+- **Without chain-of-thought:** "The answer is $3." (the model has to cram the entire computation into one token — which often fails)
+- **With chain-of-thought:** "The total cost of oranges is $4. 13 - 4 = 9, so 3 apples cost $9. 9/3 = 3, so each apple costs $3."
+
+Each token has a finite amount of computation available to it. By spreading reasoning across many tokens, the model only needs to solve a simple sub-problem at each step, with all previous results available in its working memory (the context window). In thinking models like DeepSeek R1, chain-of-thought isn't manually programmed — it emerges from RL as the model discovers that backtracking, self-checking, and trying multiple perspectives lead to more correct answers.
