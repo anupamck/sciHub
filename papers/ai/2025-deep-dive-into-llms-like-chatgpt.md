@@ -127,6 +127,13 @@ Full transcript: [transcripts/2025-deep-dive-into-llms-like-chatgpt.txt](../../t
   - [Together.ai](https://together.ai) provides access to open source / base models 
   - [LM Studio ](https://lmstudio.ai/) helps you configure and run models locally
 
+## Related papers
+- [Attention Is All You Need](2017-attention-is-all-you-need.md) — the transformer architecture underlying all models discussed in the lecture.
+- [Language Models are Unsupervised Multitask Learners (GPT-2)](2019-language-models-are-unsupervised-multitask-learners.md) — used as the primary walkthrough example for base model training and inference.
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](2022-training-language-models-to-follow-instructions-with-human-feedback.md) — the RLHF technique the lecture's post-training section is built around.
+- [DeepSeek-R1](2025-deepseek-r1-incentivizing-reasoning-capability-in-llms-via-reinforcement-learning.md) — the RL-only reasoning model referenced as an example of emergent chain-of-thought.
+- [Why Language Models Hallucinate](2025-why-language-models-hallucinate.md) — formal analysis of the hallucination problem the lecture discusses operationally.
+
 ## FAQ
 
 ### How does post-training differ from fine-tuning and reinforcement learning?
