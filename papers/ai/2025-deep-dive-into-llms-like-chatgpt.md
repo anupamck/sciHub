@@ -149,3 +149,19 @@ Chain-of-thought is when a model produces intermediate reasoning steps — "thin
 - **With chain-of-thought:** "The total cost of oranges is $4. 13 - 4 = 9, so 3 apples cost $9. 9/3 = 3, so each apple costs $3."
 
 Each token has a finite amount of computation available to it. By spreading reasoning across many tokens, the model only needs to solve a simple sub-problem at each step, with all previous results available in its working memory (the context window). In thinking models like DeepSeek R1, chain-of-thought isn't manually programmed — it emerges from RL as the model discovers that backtracking, self-checking, and trying multiple perspectives lead to more correct answers.
+
+### Why does supervised fine-tuning work so quickly with so little data?
+SFT doesn't teach the model new knowledge — it rewires which parts of the model activate. Research on Llama3, Gemma, and OPT models ([arXiv:2409.15820](https://arxiv.org/abs/2409.15820)) shows that during SFT, the model selectively activates different **attention heads** — the basic functional units inside a transformer. Each attention head roughly corresponds to a specific capability (syntax tracking, factual recall, arithmetic, etc.). SFT changes *which heads fire* and how they combine for a given input, rather than rewriting what the heads do.
+
+This explains why so little data is needed: you're learning a new activation pattern over existing capabilities, which is a much smaller search space than learning capabilities from scratch. Changes to a few parameters can significantly shift activation patterns. Complex task adaptation works because activation patterns for complex tasks are combinations of basic task patterns — the model composes existing capabilities by invoking multiple attention heads together in new configurations.
+
+Karpathy's framing is consistent with this: SFT is "algorithmically identical to pre-training — the only thing that changes is the data set." The model "very rapidly adjusts" because pretraining knowledge is already there; SFT just teaches it to surface that knowledge in a conversational format.
+
+### Why does a prompt have so much more influence than training data?
+They don't compete — they influence the output through two completely separate pathways.
+
+During **training**, each token contributes a tiny gradient update to the model's parameters. Any single token's influence is infinitesimal, diluted across billions of examples. The result is a compressed statistical summary baked into the weights.
+
+During **inference**, the parameters are frozen. Prompt tokens operate through the **attention mechanism**: for every token the model generates, it computes attention scores against every token in the context window, determining how much each prompt token directly influences the output. The prompt tokens aren't competing with billions of other tokens — they're the *only* tokens the attention mechanism can see.
+
+This maps to Karpathy's analogy: training data is long-term memory (always present but diffuse), the context window is working memory (limited but dominates immediate behavior). It's not that the prompt is "weighted higher" — it's operating through a different channel entirely. This is also why prompt injection works: instructions in the context window can redirect the model's behavior in ways that override tendencies baked into its parameters, because attention operates as a direct, unmediated signal.
