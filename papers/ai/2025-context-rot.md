@@ -1,5 +1,6 @@
 ---
 title: "P6: Context Rot"
+type: "article"
 summary: "Chroma research showing that LLM reliability degrades as input context grows — especially under semantic (vs. lexical) matching and in the presence of distractors — contradicting marketing claims that larger context windows are strictly better."
 year: 2025
 link: "https://hamel.dev/notes/llm/rag/p6-context_rot.html"

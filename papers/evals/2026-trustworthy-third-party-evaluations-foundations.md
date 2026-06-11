@@ -1,5 +1,6 @@
 ---
 title: "A shared playbook for trustworthy third party evaluations"
+type: "article"
 summary: "OpenAI shares lessons learned and recommended approaches for designing valid third-party evaluations of frontier model capabilities and safeguards, emphasising that harness choice, elicitation budget, and explicit claim scoping are critical to producing interpretable results."
 year: 2026
 link: "https://openai.com/index/trustworthy-third-party-evaluations-foundations/"

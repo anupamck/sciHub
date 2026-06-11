@@ -1,5 +1,6 @@
 ---
 title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+type: "paper"
 summary: "Demonstrates that LLMs can develop sophisticated reasoning through pure reinforcement learning without human-annotated reasoning examples, matching OpenAI-o1 performance."
 year: 2025
 link: "https://arxiv.org/abs/2501.12948"

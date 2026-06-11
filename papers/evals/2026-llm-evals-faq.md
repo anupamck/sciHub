@@ -1,5 +1,6 @@
 ---
 title: "LLM Evals: Everything You Need to Know"
+type: "article"
 summary: ""
 year: 2026
 link: "https://hamel.dev/blog/posts/evals-faq/"

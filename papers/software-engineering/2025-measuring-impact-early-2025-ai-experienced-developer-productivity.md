@@ -1,5 +1,6 @@
 ---
 title: "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+type: "paper"
 summary: "RCT with 16 experienced open-source developers completing 246 real tasks finds that AI tools (primarily Cursor Pro with Claude 3.5/3.7 Sonnet) actually increase completion time by 19% — contradicting developer forecasts of 24% speedup and expert predictions of ~39% speedup. The slowdown is robust across estimators, subsets, and outcome measures."
 year: 2025
 link: "https://arxiv.org/pdf/2507.09089"

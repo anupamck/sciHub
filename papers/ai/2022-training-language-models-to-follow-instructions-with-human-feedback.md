@@ -1,5 +1,6 @@
 ---
 title: "Training Language Models to Follow Instructions with Human Feedback"
+type: "paper"
 summary: "Introduces InstructGPT, showing that fine-tuning with human feedback (RLHF) makes a 1.3B parameter model preferred over a 175B GPT-3 by human evaluators."
 year: 2022
 link: "https://arxiv.org/abs/2203.02155"

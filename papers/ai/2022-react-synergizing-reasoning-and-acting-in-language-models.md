@@ -1,5 +1,6 @@
 ---
 title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+type: "paper"
 summary: "Introduces ReAct, a prompting framework that interleaves chain-of-thought reasoning traces with task-specific actions, enabling LLMs to ground their reasoning in external information (e.g., Wikipedia) and plan dynamically in interactive environments."
 year: 2022
 link: "https://arxiv.org/abs/2210.03629"

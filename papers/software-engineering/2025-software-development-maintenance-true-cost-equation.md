@@ -1,5 +1,6 @@
 ---
 title: "Software Development vs Maintenance: The True Cost Equation"
+type: "article"
 summary: "Industry analysis arguing that software maintenance costs are systematically underestimated, accounting for 50-80% of total lifetime expenditure, with practical strategies for budgeting and reducing both development and maintenance costs."
 year: 2025
 link: "https://idealink.tech/blog/software-development-maintenance-true-cost-equation"

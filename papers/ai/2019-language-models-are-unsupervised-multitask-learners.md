@@ -1,5 +1,6 @@
 ---
 title: "Language Models are Unsupervised Multitask Learners"
+type: "paper"
 summary: "Introduces GPT-2, a 1.5B parameter Transformer that learns to perform NLP tasks (QA, translation, summarization) without task-specific supervision, trained on a curated web corpus (WebText), demonstrating that language model capacity is key to zero-shot task transfer."
 year: 2019
 link: "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"

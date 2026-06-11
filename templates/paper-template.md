@@ -1,5 +1,6 @@
 ---
-title: "Paper title"
+title: "Title"
+type: "paper" # paper | article | video | lecture
 summary: "Short 1-3 sentence summary of the core contribution."
 year: 2026
 link: "https://example.org/paper"
@@ -24,3 +25,5 @@ tags: ["optional-tag-1", "optional-tag-2"]
 
 - Follow-up ideas:
 - Related papers:
+
+## FAQ

@@ -1,5 +1,6 @@
 ---
 title: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"
+type: "paper"
 summary: "Systematic study of LLM-as-a-judge showing strong GPT-4 agreement with human preferences on open-ended chat evaluation, while analyzing limitations such as position and verbosity biases."
 year: 2023
 link: "https://arxiv.org/pdf/2306.05685"

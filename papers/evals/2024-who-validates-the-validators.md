@@ -1,5 +1,6 @@
 ---
 title: "Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences"
+type: "paper"
 summary: "Introduces EvalGen, a mixed-initiative interface where humans and LLMs collaborate to create evaluation functions for LLM outputs, revealing that evaluation criteria often emerge through grading rather than being defined upfront (criteria drift)."
 year: 2024
 link: "https://arxiv.org/pdf/2404.12272"

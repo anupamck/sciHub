@@ -1,5 +1,6 @@
 ---
 title: "How AI Impacts Skill Formation"
+type: "paper"
 summary: "Randomized controlled trial showing that AI coding assistance impairs conceptual understanding, code reading, and debugging abilities (17% lower quiz scores) without delivering significant efficiency gains on average, while identifying three cognitively engaged AI interaction patterns that preserve learning outcomes."
 year: 2026
 link: "https://arxiv.org/pdf/2601.20245"

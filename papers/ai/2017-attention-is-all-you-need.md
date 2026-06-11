@@ -1,5 +1,6 @@
 ---
 title: "Attention Is All You Need"
+type: "paper"
 summary: "Introduces the Transformer architecture and shows that self-attention alone can outperform recurrent models on sequence transduction tasks."
 year: 2017
 link: "https://arxiv.org/abs/1706.03762"

@@ -1,5 +1,6 @@
 ---
 title: "The Complete Guide to Building Skills for Claude"
+type: "article"
 summary: "Anthropic's official guide to building 'skills' — portable instruction packages (SKILL.md + optional scripts/references/assets) that teach Claude repeatable workflows, using a three-level progressive disclosure system and optional MCP integration."
 year: 2026
 link: "https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf"

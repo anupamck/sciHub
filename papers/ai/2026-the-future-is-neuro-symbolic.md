@@ -1,5 +1,6 @@
 ---
 title: "The Future Is Neuro-Symbolic: Where Has It Been, and Where Is It Going?"
+type: "paper"
 summary: "Survey and position paper by Belle and Marcus arguing that neuro-symbolic AI — combining neural pattern recognition with symbolic reasoning — is the most promising (and perhaps only) path to reliable, explainable, trustworthy AI systems, and that 'scaling is all you need' is insufficient."
 year: 2026
 link: "https://ojs.aaai.org/index.php/AAAI/article/view/42130/46091"

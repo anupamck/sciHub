@@ -1,5 +1,6 @@
 ---
 title: "Software Engineering"
+type: "paper"
 summary: "A foundational survey of the state of the art in software engineering as of 1976, covering the entire software life cycle — requirements, design, coding, testing, maintenance, and management — and concluding that the field's scientific foundations are primitive compared to hardware engineering, especially for applications software built by non-experts in economics-driven contexts."
 year: 1976
 link: "https://selab.netlab.uky.edu/homepage/boehm-sw-eng-paper.pdf"

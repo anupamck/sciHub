@@ -1,5 +1,6 @@
 ---
 title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+type: "paper"
 summary: "Introduces RAG: a fine-tuning recipe that combines a pre-trained seq2seq model (parametric memory) with a dense Wikipedia vector index (non-parametric memory) accessed via a neural retriever, achieving state-of-the-art on open-domain QA."
 year: 2020
 link: "https://arxiv.org/abs/2005.11401"

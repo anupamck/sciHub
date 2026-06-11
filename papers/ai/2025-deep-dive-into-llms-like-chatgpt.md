@@ -1,5 +1,6 @@
 ---
 title: "Deep Dive into LLMs like ChatGPT"
+type: "video"
 summary: "A detailed walkthrough on how LLMs work under the hood, starting from the basics."
 year: 2025
 link: "https://www.youtube.com/watch?v=7xTGNNLPyMI"

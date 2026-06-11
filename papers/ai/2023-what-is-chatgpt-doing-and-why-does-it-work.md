@@ -1,5 +1,6 @@
 ---
 title: "What Is ChatGPT Doing ... and Why Does It Work?"
+type: "article"
 summary: "Long-form technical essay explaining LLM text generation as next-token prediction, neural network training dynamics, transformers, embeddings, and why large-scale statistical learning can produce human-like language."
 year: 2023
 link: "https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/"

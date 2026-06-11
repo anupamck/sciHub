@@ -1,5 +1,6 @@
 ---
 title: "Why Language Models Hallucinate"
+type: "paper"
 summary: "Argues that hallucinations are a natural statistical consequence of pretraining (reducible to binary classification errors on an Is-It-Valid problem) and persist because benchmark grading penalizes uncertainty — binary 0-1 scoring makes guessing optimal over abstaining, creating a socio-technical feedback loop that reinforces hallucination."
 year: 2025
 link: "https://arxiv.org/pdf/2509.04664"

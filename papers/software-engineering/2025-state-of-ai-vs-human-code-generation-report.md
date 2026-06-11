@@ -1,5 +1,6 @@
 ---
 title: "State of AI vs Human Code Generation Report"
+type: "article"
 summary: "Analysis of 470 open-source GitHub PRs (320 AI-co-authored, 150 human-only) finding that AI-generated PRs contain ~1.7x more issues overall, with readability problems 3x higher, security issues up to 2.74x higher, and performance regressions (excessive I/O) up to 8x more common."
 year: 2025
 link: "https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report"

@@ -1,5 +1,6 @@
 ---
 title: "A Practitioners Guide to Retrieval Augmented Generation (RAG)"
+type: "article"
 summary: "Practical walkthrough of building RAG pipelines, covering chunking, embedding-based retrieval, hybrid search, reranking, and production considerations for reducing hallucinations and improving factuality."
 year: 2024
 link: "https://cameronrwolfe.substack.com/p/a-practitioners-guide-to-retrieval"

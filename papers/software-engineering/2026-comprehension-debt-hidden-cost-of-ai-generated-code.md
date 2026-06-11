@@ -1,5 +1,6 @@
 ---
 title: "Comprehension Debt - The Hidden Cost of AI Generated Code"
+type: "article"
 summary: "Argues that AI coding tools create a new form of debt — comprehension debt — the growing gap between how much code exists in a system and how much any human genuinely understands, which accumulates invisibly because no standard engineering metric captures it."
 year: 2026
 link: "https://addyosmani.com/blog/comprehension-debt/"

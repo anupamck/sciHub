@@ -1,5 +1,6 @@
 ---
 title: "Echoes of AI: Investigating the Downstream Effects of AI Assistants on Software Maintainability"
+type: "paper"
 summary: "Controlled study on whether code co-developed with AI assistants changes downstream maintainability. Finds no clear maintainability gain or degradation when other developers later evolve the code without AI assistance."
 year: 2025
 link: "https://arxiv.org/pdf/2507.00788"

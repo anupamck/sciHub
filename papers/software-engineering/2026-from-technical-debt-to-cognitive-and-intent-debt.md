@@ -1,6 +1,6 @@
 ---
-
-## title: "From Technical Debt to Cognitive and Intent Debt: Rethinking Software Health in the Age of AI"
+title: "From Technical Debt to Cognitive and Intent Debt: Rethinking Software Health in the Age of AI"
+type: "paper"
 summary: "Proposes a triple debt model for software health — technical debt (in code), cognitive debt (in people's understanding), and intent debt (in missing rationale artifacts) — arguing that generative AI may reduce technical debt while silently accelerating the other two."
 year: 2026
 link: "[https://arxiv.org/abs/2603.22106v2](https://arxiv.org/abs/2603.22106v2)"
