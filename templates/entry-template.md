@@ -1,6 +1,6 @@
 ---
 title: "Title"
-type: "paper" # paper | article | video | lecture
+type: "paper" # paper | article | video | lecture | case-study
 summary: "Short 1-3 sentence summary of the core contribution."
 year: 2026
 link: "https://example.org/paper"
